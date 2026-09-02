@@ -3,7 +3,6 @@ from . import views
 
 urlpatterns = [
     path('categories/', views.CategoryListCreateView.as_view(), name='category-list-create'),
-    path('categories/<int:pk>/', views.CategoryRetrieveUpdateDestroyView.as_view(), name='category-detail'),
     path('tasks/', views.TaskListCreateView.as_view(), name='task-list-create'),
     path('tasks/<int:pk>/', views.TaskRetrieveUpdateDestroyView.as_view(), name='task-detail'),
 ]
