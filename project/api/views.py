@@ -24,6 +24,6 @@ class TaskRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     serializer_class = TaskSerializer
     queryset = Task.objects.all()
 
-def railway_test(request):
-    """Une vue simple pour valider le déploiement sur Railway."""
-    return JsonResponse({"message": "API déployée avec succès sur Railway !"})
+def health_check(request):
+    """Une vue simple qui renvoie un statut de succès."""
+    return JsonResponse({"status": "ok", "message": "API is healthy"})
