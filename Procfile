@@ -1,0 +1,1 @@
+web: python project/manage.py collectstatic --noinput --settings=project.settings.production && python project/manage.py migrate --noinput --settings=project.settings.production && gunicorn --chdir project project.wsgi:application
